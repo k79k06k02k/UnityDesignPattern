@@ -121,27 +121,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 88870982}
-  - component: {fileID: 88870981}
+  - component: {fileID: 88870983}
   m_Layer: 0
-  m_Name: SimpleFactoryTester
+  m_Name: StrategyTester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &88870981
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 88870980}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a741d1756ed78b4c8bb4921c8af37ed, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberA: 3
-  numberB: 5
 --- !u!4 &88870982
 Transform:
   m_ObjectHideFlags: 0
@@ -155,3 +142,16 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &88870983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88870980}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1db5cf9862558a24e8986e9ec8d5c3a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cashType: 2
+  money: 1000
