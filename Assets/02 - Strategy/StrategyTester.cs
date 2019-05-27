@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StrategyTester : MonoBehaviour
+namespace DP.Strategy
 {
-    public CashType cashType;
-    public float money;
-
-    private void Start()
+    public class StrategyTester : MonoBehaviour
     {
-        CashContext cashContext = new CashContext(cashType);
-        float result = cashContext.GetResult(money);
+        public CashType cashType;
+        public float money;
 
-        Debug.Log(result);
+        private void Start()
+        {
+            CashContext cashContext = new CashContext(cashType);
+            float result = cashContext.GetResult(money);
+
+            Debug.Log(result);
+        }
     }
 }

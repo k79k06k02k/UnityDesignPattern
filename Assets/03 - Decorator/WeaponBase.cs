@@ -1,24 +1,27 @@
 ﻿using UnityEngine;
 
-public abstract class WeaponBase
+namespace DP.Decorator
 {
-    public abstract void AttackPower();
-}
-
-
-public class Sword : WeaponBase
-{
-    public override void AttackPower()
+    public abstract class WeaponBase
     {
-        Debug.Log("Sword");
+        public abstract void AttackPower();
     }
-}
 
 
-public class Knife : WeaponBase
-{
-    public override void AttackPower()
+    public class Sword : WeaponBase
     {
-        Debug.Log("Knife");
+        public override void AttackPower()
+        {
+            Debug.Log("Sword");
+        }
+    }
+
+
+    public class Knife : WeaponBase
+    {
+        public override void AttackPower()
+        {
+            Debug.Log("Knife");
+        }
     }
 }

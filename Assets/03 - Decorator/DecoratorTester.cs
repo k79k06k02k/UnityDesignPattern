@@ -2,24 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DecoratorTester : MonoBehaviour
+namespace DP.Decorator
 {
-
-    private void Start()
+    public class DecoratorTester : MonoBehaviour
     {
-        Sword weapon = new Sword();
+        private void Start()
+        {
+            Sword weapon = new Sword();
 
-        AbilityFire abilityFire = new AbilityFire();
-        abilityFire.SetWeapon(weapon);
+            AbilityFire abilityFire = new AbilityFire();
+            abilityFire.SetWeapon(weapon);
 
-        AbilityLong abilityLong = new AbilityLong();
-        abilityLong.SetWeapon(abilityFire);
+            AbilityLong abilityLong = new AbilityLong();
+            abilityLong.SetWeapon(abilityFire);
 
-        AbilityRange abilityRange = new AbilityRange();
-        abilityRange.SetWeapon(abilityLong);
-        abilityRange.SetRange(30);
+            AbilityRange abilityRange = new AbilityRange();
+            abilityRange.SetWeapon(abilityLong);
+            abilityRange.SetRange(30);
 
-        abilityRange.AttackPower();
+            abilityRange.AttackPower();
+        }
     }
-    
 }

@@ -1,44 +1,46 @@
 ﻿using UnityEngine;
 
-
-public interface IGiveGift
+namespace DP.Proxy
 {
-    void GiveFlowers();
-    void GiveChocolate();
-}
-
-
-
-public class Pursuit : IGiveGift
-{
-    public void GiveChocolate()
+    public interface IGiveGift
     {
-        Debug.Log("Pursuit: Give Chocolate");
+        void GiveFlowers();
+        void GiveChocolate();
     }
 
-    public void GiveFlowers()
+
+
+    public class Pursuit : IGiveGift
     {
-        Debug.Log("Pursuit: Give Flowers");
-    }
-}
+        public void GiveChocolate()
+        {
+            Debug.Log("Pursuit: Give Chocolate");
+        }
 
-
-public class ProxyGiveGift : IGiveGift
-{
-    private Pursuit m_pursuit;
-
-    public ProxyGiveGift()
-    {
-        m_pursuit = new Pursuit();
-    }
-
-    public void GiveChocolate()
-    {
-        m_pursuit.GiveChocolate();
+        public void GiveFlowers()
+        {
+            Debug.Log("Pursuit: Give Flowers");
+        }
     }
 
-    public void GiveFlowers()
+
+    public class ProxyGiveGift : IGiveGift
     {
-        m_pursuit.GiveFlowers();
+        private Pursuit m_pursuit;
+
+        public ProxyGiveGift()
+        {
+            m_pursuit = new Pursuit();
+        }
+
+        public void GiveChocolate()
+        {
+            m_pursuit.GiveChocolate();
+        }
+
+        public void GiveFlowers()
+        {
+            m_pursuit.GiveFlowers();
+        }
     }
 }

@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 88870982}
   - component: {fileID: 88870981}
   m_Layer: 0
-  m_Name: FactoryTester
+  m_Name: ProxyTester
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 88870980}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc62cc0902d5ff5498691054653bcf91, type: 3}
+  m_Script: {fileID: 11500000, guid: 55c2826d75c63484a9d99c97ff3521b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &88870982

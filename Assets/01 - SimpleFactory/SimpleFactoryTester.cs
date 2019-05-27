@@ -2,16 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimpleFactoryTester : MonoBehaviour
+namespace DP.SimpleFactory
 {
-    public float numberA = 3;
-    public float numberB = 5;
-
-    private void Start()
+    public class SimpleFactoryTester : MonoBehaviour
     {
-        OperationBase operationBase = OperationFactory.CreateOperate(OperationType.Add, numberA, numberB);
-        float result = operationBase.GetResult();
+        public float numberA = 3;
+        public float numberB = 5;
 
-        Debug.Log("OperationType Add: " + result);
+        private void Start()
+        {
+            OperationBase operationBase = OperationFactory.CreateOperate(OperationType.Add, numberA, numberB);
+            float result = operationBase.GetResult();
+
+            Debug.Log("OperationType Add: " + result);
+        }
     }
 }

@@ -2,13 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ProxyTester : MonoBehaviour
+namespace DP.Proxy
 {
-    private void Start()
+    public class ProxyTester : MonoBehaviour
     {
-        ProxyGiveGift proxy = new ProxyGiveGift();
+        private void Start()
+        {
+            ProxyGiveGift proxy = new ProxyGiveGift();
 
-        proxy.GiveChocolate();
-        proxy.GiveFlowers();
+            proxy.GiveChocolate();
+            proxy.GiveFlowers();
+        }
     }
 }
