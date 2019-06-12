@@ -13,9 +13,11 @@ namespace DP.Builder
 
             BuildBase build = new BuildA();
             buildDirect.CreateBuild(build);
+            build.GetProduct().Show();
 
             build = new BuildB();
             buildDirect.CreateBuild(build);
+            build.GetProduct().Show();
         }
 
     }
