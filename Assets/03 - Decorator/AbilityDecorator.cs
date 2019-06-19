@@ -6,9 +6,9 @@ namespace DP.Decorator
     {
         private WeaponBase m_weapon;
 
-        public void SetWeapon(WeaponBase clothingComponent)
+        public void SetWeapon(WeaponBase weapon)
         {
-            m_weapon = clothingComponent;
+            m_weapon = weapon;
         }
 
         public override void AttackPower()
