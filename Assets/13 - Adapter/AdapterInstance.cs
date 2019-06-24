@@ -1,62 +1,64 @@
 ﻿using UnityEngine;
 
-
-public interface IPlayer
+namespace DP.Adapter
 {
-    void Attack();
-    void Defence();
-}
-
-public class PlayerNationalA : IPlayer
-{
-    public void Attack()
+    public interface IPlayer
     {
-        Debug.Log("NationalA Attack");
+        void Attack();
+        void Defence();
     }
 
-    public void Defence()
+    public class PlayerNationalA : IPlayer
     {
-        Debug.Log("NationalA Defence");
-    }
-}
+        public void Attack()
+        {
+            Debug.Log("NationalA Attack");
+        }
 
-public class PlayerNationalB : IPlayer
-{
-    public void Attack()
-    {
-        Debug.Log("NationalB Attack");
-    }
-
-    public void Defence()
-    {
-        Debug.Log("NationalB Defence");
-    }
-}
-
-public class PlayerTranslator : IPlayer
-{
-    private PlayerForeignerA playerForeignerA = new PlayerForeignerA();
-
-    public void Attack()
-    {
-        playerForeignerA.ForeignerAttack();
+        public void Defence()
+        {
+            Debug.Log("NationalA Defence");
+        }
     }
 
-    public void Defence()
+    public class PlayerNationalB : IPlayer
     {
-        playerForeignerA.ForeignerDefence();
-    }
-}
+        public void Attack()
+        {
+            Debug.Log("NationalB Attack");
+        }
 
-public class PlayerForeignerA
-{
-    public void ForeignerAttack()
-    {
-        Debug.Log("Foreigner Attack");
+        public void Defence()
+        {
+            Debug.Log("NationalB Defence");
+        }
     }
 
-    public void ForeignerDefence()
+    public class PlayerTranslator : IPlayer
     {
-        Debug.Log("Foreigner Defence");
+        private PlayerForeignerA playerForeignerA = new PlayerForeignerA();
+
+        public void Attack()
+        {
+            playerForeignerA.ForeignerAttack();
+        }
+
+        public void Defence()
+        {
+            playerForeignerA.ForeignerDefence();
+        }
+    }
+
+    public class PlayerForeignerA
+    {
+        public void ForeignerAttack()
+        {
+            Debug.Log("Foreigner Attack");
+        }
+
+        public void ForeignerDefence()
+        {
+            Debug.Log("Foreigner Defence");
+        }
     }
 }
